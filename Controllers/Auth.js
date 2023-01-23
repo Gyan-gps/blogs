@@ -6,7 +6,6 @@ const isAuth = require("../Middlewares/isAuth");
 
 AuthRouter.post("/register", (req, res) => {
   const { email, username, password, name, phoneNumber } = req.body;
-
   cleanUpAndValidate(email, username, password)
     .then(async () => {
       //validate if the user if already registered

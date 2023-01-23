@@ -4,6 +4,7 @@ const clc = require("cli-color");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const mongoDBSession = require("connect-mongodb-session")(session);
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -17,6 +18,7 @@ const FollowRouter = require("./Controllers/Follow");
 
 //middlerwares
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 const store = new mongoDBSession({
