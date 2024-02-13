@@ -37,7 +37,7 @@ app.use(
 
 //Routes
 app.get("/", (req, res) => {
-  res.send("Welcome to blog app");
+  res.send("Welcome to blog app ");
 });
 
 //routing
